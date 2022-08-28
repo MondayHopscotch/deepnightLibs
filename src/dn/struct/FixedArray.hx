@@ -140,6 +140,11 @@ class FixedArray<T> {
 		nalloc = 0;
 	}
 
+	/** Allow sorting of the underlying list. Note that nulls will be passed to the sort function **/
+	public function sort(f:(T, T) -> Int) {
+		values.sort(f);
+	}
+
 
 	/** Unit tests **/
 	@:noCompletion
